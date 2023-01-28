@@ -7,7 +7,8 @@ oneElement = int(number2 / 100)
 twoElement = int((number2 / 10) % 10)
 threeElement = int(number2 % 10)
 
-if (len(str(number2)) > index):
-    print("вы ввели не трёхзначное число!")
-else:
+if (len(str(number2)) == index):
     print(oneElement + twoElement + threeElement)
+
+else:
+    print("Вы ввели не трёхзначное число!")
