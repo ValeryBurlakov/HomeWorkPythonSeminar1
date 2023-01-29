@@ -1,17 +1,11 @@
 print("Поиск счастливого билета")
-number = int(input("Введите номер вашего билета: "))
-number2 = abs(number)
+number = abs(int(input("Введите номер вашего билета: ")))
 numberOfDigit = 6 # количество цифр билетика
-
-if (len(str(number2)) == numberOfDigit):
-    leftDigits = 0
-    rightDigits = 0
-    for i in range(numberOfDigit):
-        if i < 3:
-            leftDigits += number2 // 10 ** i % 10
-        else:
-            rightDigits += number2 // 10 ** i % 10
-    if (leftDigits == rightDigits):
+n = str(number)
+if (len(str(number)) == numberOfDigit):
+    leftSum = int(n[0]) + int(n[1]) + int(n[2])
+    rightSum = int(n[3]) + int(n[4]) + int(n[5])
+    if (leftSum == rightSum):
         print("Поздравляю, вы обладатель счастливого билета!")
     else:
         print("Билет не счастливый, в следующий раз повезёт!")

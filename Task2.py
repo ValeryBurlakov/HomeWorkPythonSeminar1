@@ -1,13 +1,12 @@
 print("Нахождение суммы цифр трёхзначного числа. Задача 2:")
-number = int(input("Введите трёхзначное число: "))
-number2 = abs(number) # модуль числа
-index = 3 # третий элемент
+number = abs(int(input("Введите трёхзначное число: ")))
+index = 3 
 
-oneElement = int(number2 / 100)
-twoElement = int((number2 / 10) % 10)
-threeElement = int(number2 % 10)
+oneElement = int(number / 100)
+twoElement = int((number / 10) % 10)
+threeElement = int(number % 10)
 
-if (len(str(number2)) == index):
+if (len(str(number)) == index):
     print(oneElement + twoElement + threeElement)
 
 else:
